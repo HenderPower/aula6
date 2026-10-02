@@ -1,3 +1,6 @@
+
+
+
 clientes = [
     {"nome": "Pedro","Celular":"11966192259", "empresa": "Microsoft"}, 
     {"none": "Matheus", "Celular": "11977238900", "empresa": "Volksvagem"},
