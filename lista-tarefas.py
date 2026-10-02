@@ -1,27 +1,32 @@
+
+
 tarefas = [
-    {"titulo": "Exercitar" , "Concluido": "Sim", "Prioridade": "Alta"},
-    {"titulo": "Lutar", "Concluido": "Nao", "Prioridade": "Alta"},
-    {"titulo": "Meditar", "Concluido": "Sim", "Prioridade": "Baixa"},
-    {"titulo": "Orar" , "Concluido": "Sim", "Prioridade": "Alta"},
-    {"titulo": "Ler" , "Concluido": "Nao", "Prioridade": "Baixa"},
-    {"titulo": "Liçao" , "Concluido": "Sim", "Prioridade": "Baixa" },
-    {"titulo": "Estudar", "Concluido": "Nao", "Prioridade": "Alta"},
-    {"titulo": "Trabalhar", "Concluido": "Sim", "Prioridade": "Alta"} ]
+    {"titulo": "Exercitar" , "Concluido": "Sim [X]", "Prioridade": "Alta"},
+    {"titulo": "Lutar", "Concluido": "Nao []", "Prioridade": "Alta"},
+    {"titulo": "Meditar", "Concluido": "Sim [X]", "Prioridade": "Baixa"},
+    {"titulo": "Orar" , "Concluido": "Sim [X]", "Prioridade": "Alta"},
+    {"titulo": "Ler" , "Concluido": "Nao []", "Prioridade": "Baixa"},
+    {"titulo": "Liçao" , "Concluido": "Sim [X]", "Prioridade": "Baixa" },
+    {"titulo": "Estudar", "Concluido": "Nao []", "Prioridade": "Alta"},
+    {"titulo": "Trabalhar", "Concluido": "Sim [X]", "Prioridade": "Alta"} ]
 
 def mostrar_tarefas():
     print("---> Mostrando todas as tarefas: <---")
     for tarefa in tarefas:
+        
+
         print(tarefa)
 
 def mostrar_tarefas_concluidas():
         print("---> Mostrar tarefas Concluídas <---")
         for tarefa in tarefas:
-                if tarefa["Concluido"] == "Sim":
+                if tarefa["Concluido"] == "[X]":
                         print(tarefa)
+
 def mostrar_tarefas_pendentes():
     print("---> Mostrar tarefas Pendentes <---")
     for tarefa in tarefas:
-        if tarefa["Concluido"] == "Nao":
+        if tarefa["Concluido"] == "[]":
             print(tarefa["titulo"])
 
 def mostrar_tarefas_prioridade():
@@ -38,7 +43,7 @@ def mostrar_tarefas_prioridade():
 def cadastrar_tarefa():
     print("---> Cadastrar Nova Tarefa <---")
     nome_tarefa = input("Qual é a nova tarefa: ")
-    concluir_tarefa = "Nao"
+    concluir_tarefa = "[]"
     prioridade_tarefa = input("Qual o nível de prioridade da tarefa? Baixa/Alta: ")
 
     nova_tarefa = {
@@ -55,11 +60,12 @@ def finalizar_tarefa():
 
         for tarefa in tarefas:
                 if tarefa["titulo"] == nome_tarefa:
-                        tarefa["Concluido"] = "Sim"
+                        tarefa["Concluido"] = "[X]"
                         print("Tarefa finalizada com sucesso!")
-                                                
+
                         break
         else:
+       
                         print("Tarefa não encontrada.")
 while True:
     
